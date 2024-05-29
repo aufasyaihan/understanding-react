@@ -19,7 +19,8 @@ function App() {
       <Header />
       <main>
         <CounterConfigure onSet={handleSetChange} />
-        <Counter initialCount={chosenCount} />
+        <Counter key={chosenCount} initialCount={chosenCount} /> // reset the
+        components everytime the chosenCount changes
       </main>
     </>
   );
